@@ -50,7 +50,7 @@ public class CategoryModelAssembler
         }
 
         if(!CollectionCheck.isEmpty(entity.getProducts())) {
-            categoryModel.setProducts(toProdcutModel(entity.getProducts()));
+            categoryModel.setProducts(toProductModel(entity.getProducts()));
         }
 
         if(!CollectionCheck.isEmpty(entity.getChildCategories())) {
@@ -71,7 +71,7 @@ public class CategoryModelAssembler
         return categoryModels;
     }
 
-    private List<ProductModel> toProdcutModel(List<Product> products) {
+    private List<ProductModel> toProductModel(List<Product> products) {
 
         if (products.isEmpty())
             return Collections.emptyList();
